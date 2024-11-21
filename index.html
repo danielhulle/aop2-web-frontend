@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AOP2 - Programação Web Front-end</title>
+</head>
+<body>
+    <header>
+        <h1>Praias do Espírito Santo</h1>
+        <nav>
+            <ul>
+                <a href="./camburi.html"><li>Camburi</li></a>
+                <a href="./manguinhos.html"><li>Manguinhos</li></a>
+                <a href="./itaunas.html"><li>Itaúnas</li></a>
+                <a href="./morro.html"><li>Praia do Morro</li></a>
+                <a href="./contato.html"><li>Contato</li></a>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="wrap">
+            <h2>Bem vindo!</h2>
+            <div class="content-container">
+            <img id="img-slide" src="./assets/camburi.jpg" alt="praia de camburi">
+            <p>
+                O blog Praias do Espírito Santo é um espaço dedicado a explorar as belezas do litoral capixaba. Cada postagem traz uma experiência única sobre as praias mais deslumbrantes da região, com descrições detalhadas, dicas úteis e curiosidades locais.
+                <br><br>
+                O destaque de cada artigo é a foto principal, que captura a essência da praia apresentada. Seja a calmaria das águas de Manguinhos, o agito de Camburi ou o charme rústico de Itaúnas, as imagens são selecionadas para inspirar e transportar os leitores para o cenário descrito.
+                <br><br>
+                Além disso, o blog oferece informações práticas, como como chegar, melhores períodos para visita, infraestrutura local e atividades recomendadas. É o guia perfeito para moradores e turistas que desejam explorar os encantos naturais do Espírito Santo de forma autêntica e planejada.
+            </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <footer>
+            <p>&copy; 2024 Praias do Espírito Santo. Todos os direitos reservados.</p>
+            <p>Desenvolvido por Daniel Hülle Costa</p>
+        </footer>
+    </footer>
+    <script type="text/javascript">
+        const imgs = ['./assets/camburi.jpg', './assets/morro.jpg', './assets/manguinhos.jpg', './assets/itaunas.jpg' ]
+        let index = 0;
+        
+        const changeImg = () => {
+            const imgSlide = document.getElementById('img-slide')
+
+            imgSlide.src = imgs[index];
+            index = (index + 1) % imgs.length;
+        }
+            
+        setInterval(changeImg, 3000)
+    </script>
+</body>
+
+</html>
